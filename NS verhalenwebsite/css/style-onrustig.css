@@ -1,0 +1,264 @@
+/* _______________________________
+          
+          CSS Reset
+________________________________*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* _______________________________
+
+          General
+_________________________________*/
+@font-face {
+  font-family: 'Myname';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Segoe UI'), local('SegoeUI-Semibold');
+}
+
+body {
+  background-color: #e6e6e9;
+  font-size: 12px;
+  font-family: Myname;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #003082; 
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* _______________________________
+
+          Header Nav
+_________________________________*/
+header {
+  box-shadow: 0 0.125rem 0 0 rgba(7,7,33,.15);
+  background: #fff;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: end;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 1em 2em; 
+}
+
+header nav ul li:first-of-type {
+  margin-right: auto;
+}
+
+header nav ul li a img {
+  width: 3.3rem; 
+}
+
+header nav ul li form {
+  padding: 0;
+  background-color: transparent;
+  max-width: none;
+  width: auto;
+  color: #003082;
+}
+
+header nav ul li form label input {
+  display: none;
+  margin: 0 0 0 .5em;
+  padding: 0;
+}
+
+.search {
+  display: inline;
+  font-size: .8em;
+  width: 60%;
+}
+
+/* _______________________________
+
+          Articles
+_________________________________*/
+main section:nth-of-type(2) {
+  display: block;
+  margin: 0.5rem;
+}
+
+article {
+  margin: auto;
+  background-color: #e7e8e3;
+  line-height: 1.25;
+  max-width: 15rem;
+  min-width: 100%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  }
+
+article main {
+  padding: 1rem 2rem;
+}
+
+article h2 {
+  text-align: center;
+  margin-top: 10rem;
+  color:#ffc001;
+  font-size: 5rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+  transform: rotate(9deg);
+  font-family: 'Eater', cursive;
+}
+
+article p {
+  margin: auto;
+  width: 60%;
+  margin-top: 5em;
+  padding: 1rem 2rem;
+  transform: rotate(4deg);
+  background-color:#44575e;
+  color: #cbd22c;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+div span:nth-of-type(1){
+  padding-top: 0.75rem;
+  color:black;
+  font-weight: bold;
+}
+
+.stars-js {
+  display: flex;
+  margin: 10em auto 3em;
+  justify-content: center;
+}
+
+.star{
+  display: flex;
+  color: goldenrod;
+  font-size: 2.0rem;
+  padding: 0 1rem; /* space out the stars */
+}
+
+.star::before{
+  content: '\2606';
+  cursor: pointer;
+}
+
+.star:hover::before{
+  /* the :hover should come first */
+  content: '\2605';
+  color: #bada55;
+}
+
+.star.rated::before{
+  /* the :hover should come first */
+  content: '\2605';
+}
+
+article p:nth-of-type(1){
+  transform: rotate(3deg);
+}
+
+article p:nth-of-type(2){
+  transform: rotate(-3deg);
+}
+
+article p:nth-of-type(3){
+  transform: rotate(2deg);
+}
+
+article p:nth-of-type(4){
+  transform: rotate(-3deg);
+}
+
+@media only screen and (min-width: 768px) {
+  article h2 {
+    font-size: 8em;
+  }
+}
+    
+@media only screen and (min-width: 1024px) {
+  article h2 {
+    font-size: 10em;
+  }
+
+  article p:nth-of-type(1){
+    transform: rotate(9deg);
+  }
+  
+  article p:nth-of-type(2){
+    transform: rotate(-9deg);
+  }
+  
+  article p:nth-of-type(3){
+    transform: rotate(9deg);
+  }
+  
+  article p:nth-of-type(4){
+    transform: rotate(-9deg);
+  }
+}

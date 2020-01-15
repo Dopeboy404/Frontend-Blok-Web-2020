@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Inloggen | NS verhalen website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/all.css">
+        <script src="https://use.fontawesome.com/8a9ad1db8a.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html"><img src="./images/nslogo.png"></a></li>
+                    <li>
+						<form action="#">
+							<label>
+								<i class="fas fa-search">Zoeken</i>
+								<input type="search" placeholder="Zoek naar" name="search">
+							</label>
+						</form>
+					</li>
+                    <li><a href="./login.html">Log In</a></li>
+                    <li><a href="./signin.html">Registreren</a></li>
+                    <li><a href="./favorieten.html">Favorieten</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main id="login">
+            <section>
+                <h1>Log in</h1>
+            </section>
+
+            <section>
+                <form action="#">
+                    <fieldset>
+                        <legend>
+                         Inloggen
+                        </legend>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Wachtwoord" required>    
+                        <a href="forgotpw.html" id="ww">Wachtwoord vergeten?</a>
+                        <button onclick="window.location.href='ingelogd.html'">
+                            Log in >
+                        </button>
+                        <p>
+                            Heeft u nog geen account? 
+                            <a href="signin.html" id="ww">
+                                Maak er een aan.
+                            </a>
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <script src="./js/script1.js"></script>
+        </footer>
+        
+    </body>
+
+</html>

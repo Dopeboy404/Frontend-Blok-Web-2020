@@ -1,0 +1,243 @@
+/* _______________________________
+          
+          CSS Reset
+________________________________*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* _______________________________
+
+          General
+_________________________________*/
+@font-face {
+  font-family: 'Myname';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Segoe UI'), local('SegoeUI-Semibold');
+}
+
+body {
+  background-color: #e6e6e9;
+  font-size: 12px;
+  font-family: Myname;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #003082; 
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* _______________________________
+
+          Header Nav
+_________________________________*/
+header {
+  box-shadow: 0 0.125rem 0 0 rgba(7,7,33,.15);
+  background: #fff;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: end;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 1em 2em; 
+}
+
+header nav ul li:first-of-type {
+  margin-right: auto;
+}
+
+header nav ul li a img {
+  width: 3.3rem; 
+}
+
+header nav ul li form {
+  padding: 0;
+  background-color: transparent;
+  max-width: none;
+  width: auto;
+  color: #003082;
+}
+
+header nav ul li form label input {
+  display: none;
+  margin: 0 0 0 .5em;
+  padding: 0;
+}
+
+.search {
+  display: inline;
+  font-size: .8em;
+  width: 60%;
+}
+
+/* _______________________________
+
+          Articles
+_________________________________*/
+article {
+  margin: auto;
+  background-color: #e7e8e3;
+  line-height: 1.25;
+  min-width: 75%;
+  margin-bottom: 1em;
+  box-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.3); 
+  }
+
+article main {
+  padding: 1rem 2rem;
+}
+
+article h2 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin-top: 3rem;
+  color:black;
+  background-color: white;
+  font-size: 3rem;
+  /* line-height: 1.875rem; */
+  font-weight: 400;
+  min-width: 75%;
+}
+
+article p {      
+  margin-top: 2rem;
+  padding: 3rem 3rem;
+  background-color: white;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: bold; 
+}
+
+div span:nth-of-type(1){
+  padding-top: 0.75rem;
+  color:black;
+  font-weight: bold;
+}
+
+.stars-js {
+  display: flex;
+  margin: 10em auto 3em;
+  justify-content: center;
+}
+
+.star{
+  display: flex;
+  color: goldenrod;
+  font-size: 2.0rem;
+  padding: 0 1rem; /* space out the stars */
+}
+
+.star::before{
+  content: '\2606';
+  cursor: pointer;
+}
+
+.star:hover::before{
+  /* the :hover should come first */
+  content: '\2605';
+  color: #bada55;
+}
+
+.star.rated::before{
+  /* the :hover should come first */
+  content: '\2605';
+}
+
+@media only screen and (min-width: 768px) {
+  article h2{ 
+  font-size: 5rem;
+  }
+
+  article p {
+    font-size: 2rem;
+  }
+}
+    
+@media only screen and (min-width: 1024px) {
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+      
+  article h2 {
+    width: 100%
+  }
+
+  article p:first-of-type {
+     width: 100%
+  }
+
+  article p {
+    width: 10em;
+  }
+}
+    
+
